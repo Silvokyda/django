@@ -35,7 +35,7 @@ def signup(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Signup successful. You can now login.')
-            return redirect('user_login')
+            return redirect('login')
         else:
             messages.error(request, 'An error occurred.')
             print(form.errors)
